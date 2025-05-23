@@ -9,11 +9,24 @@ package Question_1;
  *
  * @author xhu
  */
-public class Node <E, F extends Comparable> implements Comparable <Node>{
+public class Node<E, F extends Comparable> implements Comparable<Node> {
 
+    Node left;
+    Node right;
 
-    @Override
-    public int compareTo(Node t) {
-        return 0;
+    E memo;
+    F key;
+
+    Node(E element, F key) {
+        memo = element;
+        this.key = key;
     }
+
+    Node() {
+    }
+
+    public int compareTo(Node t) {
+        return key.compareTo(t.key);
+    }
+
 }
