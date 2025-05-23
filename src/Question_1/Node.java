@@ -22,6 +22,10 @@ public class Node<E, F extends Comparable> implements Comparable<Node> {
         this.key = key;
     }
 
+    Node(F key) {
+        this.key = key;
+    }
+
     Node() {
     }
 
