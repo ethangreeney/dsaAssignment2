@@ -36,7 +36,7 @@ public class BinaryTree<E, F extends Comparable> {
 
         // if the tree is empty and does not have a root node, we do not need the
         // recursive helper function, so we can just set the root as our new node and
-        // return. Else, we must use the private addNodd recursive helper method.
+        // return. Else, we must use the private addNode recursive helper method.
 
         if (root == null) {
             root = newNode;
@@ -54,7 +54,7 @@ public class BinaryTree<E, F extends Comparable> {
 
         int comparison = node.compareTo(root);
 
-        // if node preceedes the root, go left. If left null we can simply add node,
+        // if node precedes the root, go left. If left null we can simply add node,
         // else we must call this method again with roots left child. Once node has been
         // added, increment node count.
 
@@ -66,7 +66,7 @@ public class BinaryTree<E, F extends Comparable> {
                 addNode(root.left, node);
             }
 
-            // if the condition is not met then node is greater than root or equall, so go
+            // if the condition is not met then node is greater than root or equal, so go
             // right. If right null we can simply add node, else we must call this method
             // again with roots right child. Once node has been added, increment node count.
 
@@ -85,7 +85,7 @@ public class BinaryTree<E, F extends Comparable> {
     // for your debugging
     public void traversal(Node root, Consumer<Node> action) {
 
-        // The base case is when we have pased a leaf node, so root is null.
+        // The base case is when we have passed a leaf node, so current is null.
 
         if (root == null) {
             return;
