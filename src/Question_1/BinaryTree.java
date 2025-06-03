@@ -132,7 +132,7 @@ public class BinaryTree<E, F extends Comparable> {
 
     public E searchElement(F key) {
 
-        Node<E, F> toReturn = searchNode(root, new Node(key));
+        Node<E, F> toReturn = searchNode(root, new Node((F) key));
 
         if (toReturn == null) {
             return null;
