@@ -5,23 +5,33 @@
  */
 package Question_3;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.List;
 
 /**
  *
  * @author xhu
  */
-public class Maze extends Thread{
-    
-    
-    public Maze()
-    {         
-    
+public class Maze extends Thread {
+
+    List<Node> nodes;
+    List<Node> solutionPath;
+
+    Panel panel;
+
+    Node startNode;
+    Node exitNode;
+
+    public Maze(List<Node> nodes, Panel panel) {
+        this.nodes = nodes;
+        this.panel = panel;
+
     }
-    public void run()
-    {
-        
+
+    public Maze() {
+    };
+
+    public void run() {
+
     }
-        
+
 }

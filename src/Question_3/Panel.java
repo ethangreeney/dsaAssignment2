@@ -5,8 +5,6 @@
  */
 package Question_3;
 
-import java.awt.Color;
-import java.awt.Font;
 import java.awt.Graphics;
 import javax.swing.JPanel;
 
@@ -14,20 +12,18 @@ import javax.swing.JPanel;
  *
  * @author xhu
  */
-public class Panel extends JPanel{
-      
+public class Panel extends JPanel {
+
     Maze maze = new Maze();
-    
-    public Panel()
-    {
+
+    public Panel() {
 
     }
-    
-    public void paint(Graphics g)
-    {
+
+    public void paint(Graphics g) {
         this.paintComponent(g);
-        
+
         repaint();
     }
-    
+
 }
