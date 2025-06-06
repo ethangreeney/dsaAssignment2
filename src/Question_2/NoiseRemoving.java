@@ -41,11 +41,11 @@ public class NoiseRemoving {
 
         JButton saveButton = new JButton("Save image");
         saveButton.setEnabled(false);
-        ActionListener saveimageListener = _ -> ip.save("noise_removed.jpg");
+        ActionListener saveimageListener = a -> ip.save("noise_removed.jpg");
         saveButton.addActionListener(saveimageListener);
 
         JButton denoiseButton = new JButton("Clean image");
-        ActionListener denoiseListener = _ -> {
+        ActionListener denoiseListener = a -> {
             ip.cleanNoise();
             saveButton.setEnabled(true);
         };
